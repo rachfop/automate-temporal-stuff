@@ -7,8 +7,6 @@ from temporalio import activity, workflow
 from temporalio.client import Client
 from temporalio.worker import Worker
 
-#!/usr/bin/env python3
-
 """A Regex version of the Strip Function."""
 
 

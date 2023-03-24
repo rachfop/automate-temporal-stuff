@@ -19,6 +19,13 @@ The following implements the _Practice Projects_ in each chapter.
   - [x] Table Printer
 - [x] Chapter 07
   - [x] Regex Version of the strip() Method
-
+  - [x] Password strength checker
+  - [x] Password strength checker with encryption
+- [x] Chapter 08
+  - [x] Madlib
+- [x] Chapter 10
+  - [x] Coin toss
 - [x] Chapter 17
-  - [ ] Prettified Stopwatch
+  - [x] Prettified Stopwatch
+- [x] Chapter 18
+  - [x] Look Busy mouse mover

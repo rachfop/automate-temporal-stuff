@@ -31,4 +31,3 @@ Use `pytest` to automatically discover and run tests.
 ```bash
 temporal workflow terminate --workflow-id=collatz-wf
 ```
-

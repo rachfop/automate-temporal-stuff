@@ -22,45 +22,44 @@ class StopwatchInput:
     start_time: float
     last_time: float
     lap_num: int
+    lap_time: float = 0.0
+    total_time: float = 0.0
 
 
 @activity.defn
-async def stopwatch(input: StopwatchInput):
+async def stopwatch(stop_watch_input: StopwatchInput):
     print("Started.")
-    input.start_time = time.time()
-    input.last_time = input.start_time
-    input.lap_num = 1
+    stop_watch_input.start_time = time.time()
+    stop_watch_input.last_time = stop_watch_input.start_time
+    stop_watch_input.lap_num = 1
 
     # Start tracking the lap times.
-    try:
-        while True:
-            input = StopwatchInput(
-                start_time=input.start_time,
-                last_time=input.last_time,
-                lap_num=input.lap_num,
-            )
-            input.lap_time = round(time.time() - input.last_time, 2)
-            input.total_time = round(time.time() - input.start_time, 2)
 
-            lap = "lap # {} {} ({})".format(
-                (str(input.lap_num) + ":").ljust(3),
-                str(input.total_time).rjust(5),
-                str(input.lap_time).rjust(6),
-            )
-            print(lap, end="")
+    while True:
+        input()
 
-            input.lap_num += 1
-            input.last_time = time.time()  # Reset the last lap time.
-            pyperclip.copy(lap)  # Copy latest lap to clipboard.
-    except KeyboardInterrupt:
-        print("\nDone.")
+        stop_watch_input.lap_time = round(time.time() - stop_watch_input.last_time, 2)
+        stop_watch_input.total_time = round(
+            time.time() - stop_watch_input.start_time, 2
+        )
+
+        lap = "lap # {} {} ({})".format(
+            (str(stop_watch_input.lap_num) + ":").ljust(3),
+            str(stop_watch_input.total_time).rjust(5),
+            str(stop_watch_input.lap_time).rjust(6),
+        )
+        print(lap, end="")
+
+        stop_watch_input.lap_num += 1
+        stop_watch_input.last_time = time.time()  # Reset the last lap time.
+        pyperclip.copy(lap)  # Copy latest lap to clipboard.
 
 
 @workflow.defn
 class StopWatchWorkflow:
     @workflow.run
     async def run(self, input: StopwatchInput) -> str:
-        return await workflow.execute_activity(
+        return await workflow.execute_local_activity(
             stopwatch,
             input,
             start_to_close_timeout=timedelta(seconds=10),
@@ -90,5 +89,15 @@ async def main():
         print(f"Result: {result}")
 
 
+async def create_new_client_and_cancel():
+    client = await Client.connect("localhost:7233")
+    handle = client.get_workflow_handle("stopwatch")
+    await handle.cancel()
+
+
 if __name__ == "__main__":
-    asyncio.run(main())
+    try:
+        asyncio.run(main())
+    except KeyboardInterrupt:
+        asyncio.run(create_new_client_and_cancel())
+        print("\nDone.")
