@@ -17,7 +17,9 @@ class MadLibInput:
 
 @activity.defn
 async def compose_greeting(madlib: MadLibInput) -> str:
-    lib = open("{0}/chapter_08/{1}.txt".format(os.getcwd(), madlib.file_name))
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    text_file_path = os.path.join(script_dir, f"{madlib.file_name}.txt")
+    lib = open(text_file_path)
 
     string = lib.read()
     for madlib.match in re.findall(
@@ -54,7 +56,7 @@ async def main():
             id="madlib-workflow-id",
             task_queue="madlib-task-queue",
         )
-        print(f"Result: {result}")
+        print(f"{result}")
 
 
 if __name__ == "__main__":

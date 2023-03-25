@@ -20,7 +20,10 @@ async def list_joiner(input: ListJoinerInput) -> str:
     while count < len(input.list) - 2:
         joined += input.list[count] + ", "
         count += 1
-    joined += input.list[-2] + " and "
+    if len(input.list) > 2:
+        joined += input.list[-2] + ", and "
+    else:
+        joined += input.list[-2] + " and "
     joined += input.list[-1] + "."
     return joined
 

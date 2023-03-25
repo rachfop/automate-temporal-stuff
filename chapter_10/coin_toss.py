@@ -26,7 +26,7 @@ async def coin_toss(input: CoinTossInput) -> str:
     else:
         print("Nope. You are really bad at this game.")
 
-    return input.guess
+    return f"You guessed {input.guess} and the coin landed on {input.toss}."
 
 
 @workflow.defn
