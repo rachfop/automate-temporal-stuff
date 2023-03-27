@@ -10,6 +10,9 @@ python = "^3.11"
 pyautogui = "^0.9.53"
 ruff = "^0.0.246"
 matplotlib = "^3.7.1"
+starlette = "^0.25.0"
+fastapi = "^0.92.0"
+flask = "^2.2.3"
 
 
 [tool.poetry.group.dev.dependencies]

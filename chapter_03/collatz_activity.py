@@ -1,6 +1,5 @@
 from temporalio import activity
 
-from temporalio import activity
 import matplotlib.pyplot as plt
 
 
