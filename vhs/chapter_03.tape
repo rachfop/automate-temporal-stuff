@@ -46,7 +46,7 @@
 #   Hide                            Hide the subsequent commands from the output
 #   Show                            Show the subsequent commands in the output
 
-Output ../chapter_07/demo.gif
+Output ../chapter_03/demo.gif
 
 Require echo
 
@@ -56,18 +56,15 @@ Set Width 1200
 Set Height 600
 
 Hide
-Type "cd ../chapter_07/" Enter
+Type "cd ../chapter_03/" Enter
 Type "clear" Enter
 Show
 
-Type "poetry run python regex_search.py" Sleep 500ms  Enter
+
+Type "poetry run python run_workflow.py" Sleep 500ms  Enter
 
 Sleep 1
 
-Type "I would like to remove the letter 'l': hello world!" Sleep 500ms Enter
+Type "12345" Sleep 500ms Enter
 
-Sleep 1
-
-Type "l" Sleep 500ms Enter
-
-Sleep 3
+Type "Open collatz_sequence.png to see the results." Sleep 2000ms Enter

@@ -1,5 +1,6 @@
 from temporalio import activity
 
+from temporalio import activity
 import matplotlib.pyplot as plt
 
 
@@ -23,11 +24,6 @@ async def collatz(number):
                 steps += 1
 
         return num_list, steps
-    else:
-        print(
-            "You entered 1. You clearly can't read"
-            "so I'm shutting down before I catch your idiocy."
-        )
 
 
 @activity.defn

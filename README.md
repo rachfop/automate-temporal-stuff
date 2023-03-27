@@ -1,8 +1,22 @@
 # Automate the Temporal Stuff
 
-Get the book in which this repo is based on [here](https://automatetheboringstuff.com).
+This repository implements the  _Practice Projects_ in each chapter of [Automate the Boring Stuff](https://automatetheboringstuff.com) by Al Sweigart.
 
-The following implements the _Practice Projects_ in each chapter.
+## Usage
+
+Prerequisites:
+
+* Python >= 3.7
+* [Poetry](https://python-poetry.org)
+* [Local Temporal server running](https://docs.temporal.io/application-development/foundations#run-a-development-cluster)
+
+With this repository cloned, run the following at the root of the directory:
+
+    poetry install
+
+That loads all required dependencies. Then to run a sample, usually you just run it in Python. For example:
+
+    poetry run python chapter_04/list_joiner.py
 
 - [x] Chapter 03
   - [x] The Collatz Sequence
