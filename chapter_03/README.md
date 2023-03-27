@@ -1,5 +1,7 @@
 # Collatz Conjecture
 
+![Demo of the application](demo.gif)
+
 The Collatz conjecture transform every positive integer into 1 by the following operation:
 
 - If the number is even, divide it by two.
