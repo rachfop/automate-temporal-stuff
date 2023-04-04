@@ -70,6 +70,8 @@ Sleep 3
 
 Type "poetry run python coin_toss.py" Sleep 500ms  Enter
 
+Sleep 1
+
 Type "tails" Sleep 500ms Enter
 
 Sleep 3

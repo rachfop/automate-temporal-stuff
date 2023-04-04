@@ -26,6 +26,9 @@ Enter
 Sleep 500ms
 Enter
 Ctrl+C
+Hide
 Ctrl+C
 Ctrl+C
+Type "clear" Enter
+Show
 Sleep 5s
