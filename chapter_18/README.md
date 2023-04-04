@@ -17,3 +17,4 @@ poetry run python look_busy.py
 ```
 
 The workflow will start executing and continue indefinitely until you interrupt it with `CTRL-C`.
+When you pass a keyboard interruption error to the Workflow, it will send a Cancellation request.

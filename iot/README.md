@@ -33,3 +33,9 @@ poetry run python app.py
 ```
 
 Then visit [http://127.0.0.1:5000](http://127.0.0.1:5000).
+
+Serve with [ngrox](http://9b49-64-47-89-125.ngrok.io):
+
+```bash
+ngrok http 127.0.0.1:5000 -host-header="127.0.0.1:5000"
+```

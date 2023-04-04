@@ -12,3 +12,5 @@ poetry run python mad_lib.py
 
 Follow the prompts in the console to enter your own words to fill in the blanks of the story.
 Once you have filled in all the blanks, the resulting story will be printed to the console.
+
+This demonstrates how to read from a file with an Activity.

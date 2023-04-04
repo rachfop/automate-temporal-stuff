@@ -14,3 +14,5 @@ poetry run python stopwatch.py
 
 Once the program is running, press the Enter key to start the stopwatch. Press Enter again to record a lap time. The latest lap time will be copied to the clipboard. To quit the program, press Ctrl-c.
 
+When you pass a keyboard interruption error to the Workflow, it will send a Cancellation request.
+This demonstrates how to run a local Activity.

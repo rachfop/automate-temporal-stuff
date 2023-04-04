@@ -4,3 +4,4 @@ __pycache__
 secure/*
 .env
 */.env
+*/ngrok.yml

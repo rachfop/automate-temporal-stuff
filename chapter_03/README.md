@@ -33,3 +33,16 @@ Use `pytest` to automatically discover and run tests.
 ```bash
 temporal workflow terminate --workflow-id=collatz-wf
 ```
+
+## About
+
+This Temporal Workflow executes two Activities:
+
+- one that tracks the steps of the Collatz sequence
+- another one that graphs the results
+
+![](collatz_sequence.png)
+
+Each Workflow stores the results of the Workflow.
+
+This sample includes a [test](./tests) for the Collatz Activity.

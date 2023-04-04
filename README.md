@@ -21,7 +21,7 @@ That loads all required dependencies. Then to run a sample, usually you just run
 ## Chapters
 
 - [x] [Chapter 03](./chapter_03/)
-  - [x] The Collatz Sequence
+  - [x] The Collatz Sequence (MathPlotLib)
 - [x] [Chapter 04](./chapter_04/)
   - [x] Character Grid
   - [x] Oxford Comma
@@ -34,7 +34,7 @@ That loads all required dependencies. Then to run a sample, usually you just run
   - [x] Strip() Method
   - [x] Password strength checker
 - [x] [Chapter 07 with Encryption](./chapter_07_encryption/)
-  - [x] Password strength checker with encryption 
+  - [x] Password strength checker with encryption
 - [x] [Chapter 08](./chapter_08/)
   - [x] Madlib
 - [x] [Chapter 10](./chapter_10/)
