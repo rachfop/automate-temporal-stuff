@@ -3,7 +3,7 @@ import asyncio
 from fastapi import FastAPI
 from temporalio.client import Client
 
-from fast_api.run_worker import SayHello
+from fast.run_worker import SayHello
 
 app = FastAPI()
 

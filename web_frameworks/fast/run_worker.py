@@ -1,5 +1,5 @@
 import asyncio
-from datetime import datetime, timedelta
+from datetime import timedelta
 
 from temporalio import activity, workflow
 from temporalio.client import Client

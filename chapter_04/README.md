@@ -20,4 +20,3 @@ This code defines a workflow and activity that join a list of strings into a sen
 ```python
 poetry run python list_joiner.py
 ```
-

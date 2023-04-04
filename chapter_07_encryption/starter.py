@@ -25,10 +25,6 @@ async def main():
         id="encryption-workflow-id",
         task_queue="encryption-task-queue",
     )
-    if result is True:
-        print("That's a strong password. Remember to use it for one site only.")
-    else:
-        print("That's a weak password. I wouldn't recommend using it")
     print(f"Result: {result}")
 
 

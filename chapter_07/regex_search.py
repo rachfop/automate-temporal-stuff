@@ -17,6 +17,7 @@ class RegexSearchInput:
 
 @activity.defn
 async def strip(input: RegexSearchInput) -> str:
+    # Uses strip not REGEX
     return input.text.replace(input.remove, "")
 
 

@@ -3,7 +3,7 @@ import asyncio
 from flask import Flask
 from temporalio.client import Client
 
-from flask_api.run_worker import SayHello
+from flask.run_worker import SayHello
 
 app = Flask(__name__)
 

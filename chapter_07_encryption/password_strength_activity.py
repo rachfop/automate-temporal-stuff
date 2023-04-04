@@ -19,4 +19,4 @@ async def pass_strength_checker(clipboard: PasswordClipBoard) -> str:
     if pass_digit_regex.search(clipboard.password) is None:
         return "Needs a digit"
     else:
-        return True
+        return "Strong password"

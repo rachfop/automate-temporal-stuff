@@ -14,6 +14,8 @@ Follow the prompts in the console to a phrase of words and then a letter to stri
 
 ## Strong Password detector
 
+![Demo of the application](demo_password.gif)
+
 This is a well-written program that checks whether a password is strong or not using regular expressions. It uses the Temporal workflow library to define the workflow and activity functions, which is a good choice for implementing long-running, asynchronous tasks.
 
 To see how to run this with encryption and a data converter, see [chapter_07_encryption](../chapter_07_encryption/).

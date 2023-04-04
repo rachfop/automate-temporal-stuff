@@ -33,7 +33,7 @@ async def pass_strength_checker(clipboard: PasswordClipBoard) -> str:
     if pass_digit_regex.search(clipboard.password) is None:
         return "Needs a digit"
     else:
-        return True
+        return "Strong Password"
 
 
 @workflow.defn
@@ -64,10 +64,7 @@ async def main():
             id="password-workflow-id",
             task_queue="password-task-queue",
         )
-        if result is True:
-            print("That's a strong password. Remember to use it for one site only.")
-        else:
-            print("That's a weak password. I wouldn't recommend using it")
+
         print(f"Result: {result}")
 
 
