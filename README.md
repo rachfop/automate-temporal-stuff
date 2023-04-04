@@ -50,6 +50,8 @@ That loads all required dependencies. Then to run a sample, usually you just run
   - [Fast API](./web_frameworks/fast/)
   - [Flask](./web_frameworks/flask/)
   - [Starlette](./web_frameworks/starlette/)
+- [IOT](./iot/)
+  - CO2 monitor
 
 ## Pull requests
 

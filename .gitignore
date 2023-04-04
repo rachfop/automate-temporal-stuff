@@ -2,3 +2,5 @@ __pycache__
 .ruff_cache
 */__pycache__
 secure/*
+.env
+*/.env

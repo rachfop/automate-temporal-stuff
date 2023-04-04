@@ -12,7 +12,7 @@ ruff = "^0.0.246"
 matplotlib = "^3.7.1"
 starlette = "^0.25.0"
 fastapi = "^0.92.0"
-flask = "^2.2.3"
+flask = {extras = ["async"], version = "^2.2.3"}
 
 
 [tool.poetry.group.dev.dependencies]
@@ -32,6 +32,11 @@ lint = [{cmd = "ruff check ./*/*.py"}]
 select = ["E", "F"]
 line-length = 120
 
+
+
+[tool.poetry.group.co2env]
+optional = true
+dependencies = { twilio = "^7.0.0", pyairvisual = "^2022.12.1" }
 
 [tool.poetry.group.encryption]
 optional = true
