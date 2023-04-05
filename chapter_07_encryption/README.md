@@ -16,7 +16,7 @@ This will start the worker. Then, in another terminal, run the following to exec
 
 Enter your password in the terminal.
 
-The workflow should complete with the hello result. To view the workflow, use [temporal](https://docs.temporal.io/cli/):
+The workflow should complete with the result. To view the workflow, use [temporal](https://docs.temporal.io/cli/):
 
     temporal workflow show --workflow-id=encryption-workflow-id
 

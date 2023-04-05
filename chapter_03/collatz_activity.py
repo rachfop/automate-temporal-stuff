@@ -26,10 +26,15 @@ async def collatz(number):
 
 
 @activity.defn
-async def graph(num_list):
-    """Plot a graph of the numbers in num_list."""
+async def graph(num_list, filename="collatz_sequence.png"):
+    """Plot a graph of the numbers in num_list and save it to a file."""
+    if not num_list:
+        raise ValueError("num_list is empty")
     plt.plot(num_list)
     plt.ylabel("Numbers")
     plt.xlabel("Steps")
     plt.title("Collatz Sequence Graph")
-    plt.savefig("collatz_sequence.png")
+    with open(filename, "wb") as f:
+        plt.savefig(f)
+    plt.show()
+    return filename

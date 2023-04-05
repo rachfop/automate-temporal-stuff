@@ -36,7 +36,7 @@ class CO2EnvironmentWorkflow:
                         start_to_close_timeout=timedelta(seconds=10),
                         heartbeat_timeout=timedelta(seconds=2),
                     )
-                    await asyncio.sleep(5)
+                    await asyncio.sleep(60)
 
                 return {
                     "co2": self._co2,
